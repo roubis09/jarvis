@@ -55,14 +55,14 @@ def send_email(request):
     s.starttls()
 
     # Authentication
-    s.login('biswasrounik@gmail.com', 'dyzfwezugksgrndd')
+    s.login('(email)', '(password)')
 
     msg = MIMEMultipart()
     message_template = read_template('Myapp/message.txt')
     #message = 'Dear ${PERSON_NAME},Congratulations 🎊🎊🎊🎊,  you have received a email from Mitchell 📧 🥳 🎉 . This is the message ➡ ${MESSAGE}Enjoy your day 😇 Bye.'
     message = message_template.substitute(PERSON_NAME=name,MESSAGE=message)
-    msg['From'] = 'biswasrounik@gmail.com'
-    msg['To'] = 'biswasrounik@gmail.com'
+    msg['From'] = '(email)'
+    msg['To'] = '(email)'
     msg['Subject'] = "CONFORMATION MAIL"
     # add in the message body
     msg.attach(MIMEText(message, 'plain'))
