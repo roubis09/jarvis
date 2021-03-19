@@ -59,12 +59,12 @@ def send_email(request):
 
     msg = MIMEMultipart()
     message_template = read_template('Myapp/message.txt')
-    #message = 'Dear ${PERSON_NAME},Congratulations 🎊🎊🎊🎊,  you have received a email from Mitchell 📧 🥳 🎉 . This is the message ➡ ${MESSAGE}Enjoy your day 😇 Bye.'
+    #message = 'Hi'
     message = message_template.substitute(PERSON_NAME=name,MESSAGE=message)
     msg['From'] = '(email)'
     msg['To'] = '(email)'
     msg['Subject'] = "CONFORMATION MAIL"
-    # add in the message body
+
     msg.attach(MIMEText(message, 'plain'))
     try :
         s.send_message(msg)
