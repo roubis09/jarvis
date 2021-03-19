@@ -1,0 +1,45 @@
+{% extends 'Myapp/base.html' %}
+{% block content %}
+	<body class="bg-1">
+<div style="padding-top: 10%";>
+
+<div class="container" style="padding-top: 5%;  border-style:solid; border-width : 3px; background-color: darkcyan; font: 20px Montserrat, sans-serif;">
+
+<div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Register</legend>
+                <!--<div class="form-group">
+					<label for="exampleInputEmail1" style="color : black; font-size: 1.5ch; padding-bottom: 1%; ">Name</label>
+					<input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" placeholder="Enter your name" name="query">
+				
+					<label for="exampleInputEmail1" style="color : black; font-size: 1.5ch; padding-bottom: 1%; padding-top: 5%;">Username</label>
+					<input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Enter your name" name="query">
+				
+					<label for="exampleInputEmail1" style="color : black; font-size: 1.5ch; padding-bottom: 1%; padding-top: 5%;">Email</label>
+					<input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter your name">
+				
+					<label for="exampleInputEmail1" style="color : black; font-size: 1.5ch; padding-bottom: 1%; padding-top: 5%;">Password</label>
+					<input type="password" class="form-control" id="password" name="password" aria-describedby="emailHelp" placeholder="Enter your name" name="query">
+				</div>-->
+				
+				{{ form }}
+				
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-danger" type="submit">Register</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="btn btn-outline-danger">
+                Already have An Account? <a class="ml-2" style="color: blue;" href="{% url 'login' %}">Login Now</a>
+            </small>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+
+	
+{% endblock content %}

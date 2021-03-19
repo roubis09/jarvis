@@ -1,0 +1,29 @@
+{% extends 'Myapp/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <h3 class="margin">Who Am I ?</h3>
+  <img src="../../static/images/jarvis.png" class="img-responsive img-circle margin" style="display:inline" alt="jarvis" width="350" height="350">
+  <h3>I'm an adventurer</h3>
+</div>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin">What Am I ?</h3>
+  <p>I am your virtual guide and will also let you know all about your favourite heritage places.With me you are capable off having a solo trip as well, because JARVIS is always with you :) </p>
+  
+    <span class="glyphicon glyphicon-search"></span> Search
+  </a>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>Virtual guide JARVIS :)</p>
+</footer>
+
+{% endblock %}
+from django.urls import path, include
+from .views import home,chat, bot_search, send_mail, mail
+

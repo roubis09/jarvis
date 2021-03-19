@@ -1,0 +1,4 @@
+Dear ${PERSON_NAME},
+Congratulations 🎊🎊🎊🎊,  you have received a email from Mitchell 📧 🥳 🎉 . 
+This is the message ➡ ${MESSAGE}
+Enjoy your day 😇 Bye.
